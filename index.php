@@ -10,25 +10,34 @@
 
 <?php
 
-    function foto($img,$width=450,$height=450){
-              echo "<img src=$img width=$width height=$height>";
+//Функции: Задача 1 (не очень поняла что с alt делать, в каком виде она выводится на страницу)
+    function foto($img,$alt=0,$width=450,$height=450){
+              echo "<img src=$img alt=$alt width=$width height=$height>";
     
     }
        
     $img='https://www.livekavkaz.ru/uploads/posts/2020-06/1591963235-1jpg.jpg';
-    foto($img);
+    $alt='Китайская стена';
+    foto($img,$alt);
 
-    $img='https://cont.ws/uploads/pic/2020/8/стена.jpg';
-    foto($img);
-
-    $img='https://s0.rbk.ru/v6_top_pics/media/img/5/46/756038770746465.jpg';
     
-    foto($img);
-
-    $img='images\makar.jpg.jpg';
-    $width='500';
-    $height='800';
+    $img='https://s0.rbk.ru/v6_top_pics/media/img/5/46/756038770746465.jpg';
+    $width='400';
+    $height='600';
     foto($img,$width,$height);
+    //Функции: Задача 2
+    
+    function foto1($img,$alt=0,$width=450,$height=450){
+        global $img;    
+        echo "<img src=/images/$img alt=$alt width=$width height=$height>";
+        }
+       
+    $img='makar.jpg.jpg';
+    foto1($img);
+
+       
+
+
 
 ?>
     </body>
